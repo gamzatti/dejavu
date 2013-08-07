@@ -11,11 +11,15 @@
       <li>
       <%= f.label :list, "Is it new" %> 
       <%= radio_button("entry", "list_id", 1, :checked => true) %> 
-      or for the archive?<%= radio_button("entry", "list_id", 2) %>  </li>
-
+      or for the archive?<%= radio_button("entry", "list_id", 2) %>
+      or in progress? <%= radio_button("entry", "list_id", 3) %>   </li>
       <li>
       <%= f.label :name, "What's its name?" %>
       <%= f.text_field :name %> </li>
+
+      <li><div id="up_to_field">
+      <%= f.label :up_to, "Where are you up to?" %>
+      <%= f.text_field :up_to %> </div></li>
       
       <li>
       <%= f.label :url, "OR its URL?" %>
