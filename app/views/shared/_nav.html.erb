@@ -1,0 +1,11 @@
+<div class="nav">
+  <ul>
+    <%=nav_item(surprise_path, "Home") %>
+    <%=nav_item(new_entry_path, "Create entry") %>
+    <%=nav_item(entries_index_path, "All entries") %>
+    <% List.all.each do |list| %>
+      <%=nav_item(list, "#{list.name.capitalize} entries") %>
+    <% end %>
+  </ul>
+</div><!--nav-->
+

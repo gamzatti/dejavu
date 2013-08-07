@@ -1,0 +1,186 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+ 
+body {
+  background-color: #338afd;
+  font-family: 'PT Sans', sans-serif;
+  color: #414141;
+}
+
+body .box {
+  background-color:#fff;
+  border-radius:10px;
+  margin:10px;
+  padding:10px;
+  width:95%;
+  position:absolute;
+}
+
+/*links */
+a {
+  text-decoration: none;
+  color:#338afd;
+}
+
+a:hover {
+
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  color: #338afd;
+  font-size: 2.5em;
+}
+
+.header h1 {
+  font-size: 2em;
+  width: 15%;
+  position:fixed;
+  top:20px;
+  left:50px;
+}
+
+h1 a {
+  color: #338afd;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-top: 3px double black;
+  padding-top: 20px;
+}
+
+/* h3 {
+  font-size: 1.3em;
+  color: #9ac5fe;
+  line-height: 2px;
+  margin-top: 30px;
+}
+*/
+
+h4,.medium_heading {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* header */
+
+.header h1 {
+  float:left;
+}
+
+.nav {
+  float:right;
+}
+  
+.nav li  {
+  float:left;
+  padding: 10px;
+  border: 2px solid #999;
+  margin: 10px;
+  margin-bottom: 0;
+  border-radius:10px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0; 
+  font-family: 'Lora', serif;
+
+}
+.nav li a {
+  color:black;
+}
+.dividingline {
+  clear:both;
+}
+
+.active_link {
+  background-color: #cde2fe;
+}
+
+ul .active_link {
+  border-bottom-color:  #cde2fe;
+}
+
+/* sidebar */
+.sidebar {
+  width:10%;
+  float:left;
+  padding-left:20px;
+  margin-left:20px;
+  position:fixed;
+  font-size:0.7em;
+  font-family: 'Lora', serif;
+  top:130px;
+  border: 0.5px solid #ccc;
+  border-radius: 10px;
+}
+
+/* mainpage */
+.mainpage {
+  width:80%;
+  float:right;
+  background-color: #cde2fe;
+  padding:10px;
+  border-radius:10px;
+}
+
+/* forms */
+
+input, select {
+  border: 1px solid #bbb;
+  padding: 2px;
+  height: auto !important;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 180px;
+}
+
+.button1 {
+}
+
+.button1 a {
+  color: #cde2fe;
+}
+
+.button1 a:hover {
+  color: #414141;
+}
+
+.top_button a {
+  color: black;
+}
+
+
+.clear {
+  clear:both;
+}
+
+.medium_entries {
+  display:none;
+}
+
+/* pink: color: #414141; #fd328a */

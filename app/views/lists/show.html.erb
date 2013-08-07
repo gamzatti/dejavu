@@ -1,0 +1,24 @@
+<%= render partial: 'shared/sidebar' %>
+
+<div class="mainpage">
+
+<h2><%= @list.name.capitalize %> Entries</h2>
+<div class="list<%=@list.id%>">
+  <% @mediums.each do |medium| %>
+
+      <%= render partial: 'shared/listing_media', locals: {medium: medium} %>
+
+      <ul>
+      <% medium.entries.each do |entry| %>
+      <% if entry.list_id == @list.id %>
+ 
+        <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %>
+
+        <% end %>
+      <% end %>
+      </ul> 
+  
+  <% end %>
+</div>
+
+</div><!--mainpage-->

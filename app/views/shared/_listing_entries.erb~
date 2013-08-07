@@ -1,0 +1,7 @@
+<li>
+  <a href="<%= entry.url %>"><%= entry.name %></a>
+  | <span class ="button1"><%= link_to "delete", entry, method: :delete,
+  data: { confirm: "You sure?" } %></span>
+  | <span class ="button1"><%= link_to "move to other list", entry, method: :put %></span>
+</li>
+

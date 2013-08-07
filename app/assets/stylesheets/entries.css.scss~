@@ -1,0 +1,115 @@
+// Place all the styles related to the Entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #338afd;
+  font-family: 'PT Sans', sans-serif;
+  color: #414141;
+}
+
+body .box {
+  background-color:#fff;
+  border-radius:10px;
+  margin:10px;
+  padding:10px;
+  width:95%;
+  position:absolute;
+}
+
+a {
+  text-decoration: none;
+  color:#fd328a;
+}
+
+a:hover {
+
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  color: #338afd;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #9ac5fe;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-top: 3px double #CCCC99;
+  padding-top: 20px;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: #9ac5fe;
+  line-height: 2px;
+  margin-top: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* header */
+
+.header h1 {
+  float:left;
+}
+
+.nav {
+  float:right;
+}
+  
+.nav li  {
+  float:left;
+  padding:10px;
+  border: 1px solid #bbb;
+  margin: 10px;
+  border-radius:10px;
+  font-size: 1.5em;
+}
+
+.dividingline {
+  clear:both;
+}
+
+/* sidebar */
+.sidebar {
+  width:15%;
+  float:left;
+  padding-left:20px;
+  margin-left:20px;
+}
+
+/* mainpage */
+.mainpage {
+  width:80%;
+  float:right;
+}
+
+
+/* forms */
+
+input, select {
+  border: 1px solid #bbb;
+  padding: 2px;
+  height: auto !important;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 180px;
+}
+
+.button1 {
+  border-bottom: 1px dotted gray;
+}
+
+.button1 a {
+  color:  #414141;
+}

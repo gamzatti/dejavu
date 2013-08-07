@@ -1,0 +1,7 @@
+<div class="sidebar">
+  <ul>
+    <% Medium.all.each do |medium| %>
+        <li><%= link_to medium.name.pluralize.capitalize, "##{medium.id}" %></li>
+      <% end %>
+</div><!--sidebar-->
+

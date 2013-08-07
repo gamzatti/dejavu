@@ -1,0 +1,18 @@
+<%= render partial: 'shared/sidebar' %>
+
+<div class="mainpage">
+
+<h2>All entries</h2>
+<div class="bottomform">
+  <% @mediums.each do |medium| %>
+      <%= render partial: 'shared/listing_media', locals: {medium: medium} %>
+
+      <ul class="medium_entries" id="medium_<%=medium.id%>">
+      <% medium.entries.each do |entry| %>  
+        <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %>
+      <% end %>
+      </ul> 
+   <% end %>
+</div>
+
+</div><!--mainpage-->

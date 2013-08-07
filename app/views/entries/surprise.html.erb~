@@ -1,0 +1,17 @@
+<div class="mainpage">
+
+  <div class="bottomform">
+  <%= @surprise_entries.each do |entry| %>
+
+    <h2> Surprise <%=entry.medium.name%>...</h2>
+    <ul>  <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %></ul>
+  <% end %>
+
+  <h2> Recent entries </h2>  
+  <ul><% @recent_entries.each do |entry| %>
+    <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %>
+  <% end %>
+  </ul>
+  </div>
+
+</div><!--mainpage-->

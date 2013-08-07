@@ -1,0 +1,19 @@
+
+
+<h2>Old entries</h2> 
+  <h3><%= List.find(2).name.capitalize %></h3>
+  <% for m in 1..Medium.count %>
+    <h4><%= Medium.find(m).name.pluralize.capitalize %></h4>
+    <% Medium.find(m).entries.each do |entry| %>
+      <ul>
+        <% if entry.list_id == 2 %>
+          <li><a href="<%= entry.url %>"><%= entry.name %></a>
+          | <span class ="button1"><%= link_to "delete", entry, method: :delete,
+          data: { confirm: "You sure?" } %></span>
+          | <span class ="button1"><%= link_to "unarchive", entry, method: :put %></span>
+          </li>
+        <% end %>
+      </ul> 
+    <% end %>
+  <% end%>
+
