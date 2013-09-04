@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130807192916) do
+ActiveRecord::Schema.define(:version => 20130904183542) do
 
   create_table "entries", :force => true do |t|
     t.string   "name",       :null => false
@@ -34,5 +34,7 @@ ActiveRecord::Schema.define(:version => 20130807192916) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "media", ["name"], :name => "index_media_on_name", :unique => true
 
 end

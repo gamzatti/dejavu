@@ -4,6 +4,6 @@ class Entry < ActiveRecord::Base
   validates_presence_of :name, :unless => :url?
   validates_presence_of :url, :unless => :name?
 
-  belongs_to :list
-  belongs_to :medium
+  belongs_to :list, dependent: :destroy
+  belongs_to :medium, dependent: :destroy
 end 
