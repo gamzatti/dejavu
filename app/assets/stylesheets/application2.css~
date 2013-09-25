@@ -92,7 +92,6 @@ ul {
 
 .nav {
   float:right;
-  position:relative;
 }
   
 .nav li  {
@@ -107,30 +106,16 @@ ul {
   border-bottom-right-radius:0;
   border-bottom-left-radius:0; 
   font-family: 'Lora', serif;
-  
 
 }
 .nav li a {
   color:black;
 }
 
-.nav .dropdown {
-  margin:0;
-  float:right;
-  clear:both;
-  width:250px;
-  position: absolute;	
-  top:70px;
-  right:0;
-}
-
-.nav .dropdown li {
-  background-color:white;
-  text-transform: lowercase;
-  float:none;
-}
-
 .nav ul ul li a {
+  color:green;
+  font-family: sans-serif;
+  text-transform: downcase;
 }
 
 .dividingline {

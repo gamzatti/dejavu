@@ -5,19 +5,19 @@
 <h2><%= @list.name.capitalize %> Entries</h2>
 <div class="list<%=@list.id%>">
   <% @mediums.each do |medium| %>
-
-      <%= render partial: 'shared/listing_media', locals: {medium: medium} %>
-
-      <ul>
+    <% if Entry.where(list_id: @list.id, medium_id: medium.id).count != 0 %>
+      <h4 id="<%= medium.id %>"><%= medium.name.pluralize.capitalize %></h4>
+      <%= link_to_function "#{Entry.where(list_id: @list.id, medium_id: medium.id).count} items", "$('#medium_#{medium.id}').slideToggle()" %>
+      <ul class="medium_entries" id="medium_<%=medium.id%>">
       <% medium.entries.each do |entry| %>
-      <% if entry.list_id == @list.id %>
- 
-        <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %>
+        <% if entry.list_id == @list.id %>
 
+          <%= render partial: 'shared/listing_entries', locals: {entry: entry} %>
+        
         <% end %>
       <% end %>
       </ul> 
-  
+    <% end %>
   <% end %>
 </div>
 

@@ -1,3 +1,3 @@
-<h4 id="<%= medium.id %>"><%= link_to_function medium.name.pluralize.capitalize, "$('#medium_#{medium.id}').toggle()" %></h4>
+<h4 id="<%= medium.id %>"><%= medium.name.pluralize.capitalize %></h4><%= link_to_function "#{Entry.where(medium_id: medium.id).count} items", "$('#medium_#{medium.id}').slideToggle()" %>
 
 

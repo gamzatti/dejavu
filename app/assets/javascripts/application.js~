@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function(){
-  $('.dropdown_button').hover(function(){
-    $('.dropdown').slideToggle()
-  })
+
+$('.dropdown_button').hover(function(){
+  $('.dropdown').slideToggle()
 })

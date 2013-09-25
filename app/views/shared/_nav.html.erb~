@@ -1,0 +1,34 @@
+<div class="nav">
+  <ul>
+    <%=nav_item(surprise_path, "Home", :home) %>
+    <%=nav_item(new_entry_path, "Create entry", :new) %>
+    <%=nav_item(entries_index_path, "All entries", :all) %>
+    <%=nav_item_dropdown('#', "Lists", :lists) %>
+  </ul>
+
+  <ul class="dropdown">
+    <% List.all.each do |list| %>
+    <li><%=link_to "#{list.name.capitalize} entries", list %></li>
+    <% end %>
+  </ul>
+
+
+
+
+
+
+<ul>
+  <li class="dropdown_button">
+    <a>Lists</a>
+    <ul class="dropdown">
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div><!--nav-->
+

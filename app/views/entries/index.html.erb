@@ -3,16 +3,23 @@
 <div class="mainpage">
 
 <h2>All entries</h2>
-<div class="bottomform">
   <% @mediums.each do |medium| %>
-      <%= render partial: 'shared/listing_media', locals: {medium: medium} %>
-
+    <h4 id="<%= medium.id %>"><%= medium.name.pluralize.capitalize %></h4>
+    <% if Entry.where(medium_id: medium.id).count != 0 %>
+      <%= link_to_function "#{Entry.where(medium_id: medium.id).count} items", "$('#medium_#{medium.id}').slideToggle()" %>
       <ul class="medium_entries" id="medium_<%=medium.id%>">
       <% medium.entries.each do |entry| %>  
-        <%= render partial: 'shared/listing_entries', locals: {entry: entry}  %>
+        <li>
+          <a href="<%= entry.url %>"><%= entry.name %></a>
+          <%= entry.list.name.downcase %>
+          <span class ="button1"><%= link_to "delete", entry, method: :delete,
+          data: { confirm: "You sure?" } %></span>
+          <span class ="button1"><%= link_to "move to other list", entry, method: :put %></span>
+          <%= entry.up_to %>
+        </li>
       <% end %>
       </ul> 
+    <% end %>  
    <% end %>
-</div>
 
 </div><!--mainpage-->
