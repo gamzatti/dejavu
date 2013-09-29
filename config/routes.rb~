@@ -7,10 +7,7 @@ Dejavu::Application.routes.draw do
   put 'entries/:id' => 'entries#update' 
   match 'entries/new' => 'entries#new'
   match 'entries/index' => 'entries#index'
-#  match 'entries/:id/edit' => "entries#edit", :as => entry #so I'm trying to make it so that clicking edit on entry.id = 3, will take you to the entries/3/edit page, rather than to entries/x/edit, where x is the list id of current page.
-#  match 'lists/:id/edit_current_entry_path' => 'lists#edit_current_entry' trying to solve above problem
-#  match 'entries/index/edit_current_entry' => 'entries#edit' trying to solve above problem
-  
+  resources :entries
   match 'surprise' => 'entries#surprise'
 
   root :to => redirect('/surprise')    

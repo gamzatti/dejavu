@@ -22,20 +22,21 @@ class EntriesController < ApplicationController
       open(@entry.url).read =~ /<title>(.*?)<\/title>/
       @entry.name = $1
     end
-    @entry.save
+ 
+  @entry.save
     return_to_part_of_page
   end
   
-  def update
+  def edit
     @entry = Entry.find(params[:id])
-    if @entry.list_id == 1
-      @entry.update_attributes(list_id: 2)
-    else
-      @entry.update_attributes(list_id: 1)
-    end
-    return_to_part_of_page 
   end
 
+  def update
+    @entry = Entry.find(params[:id])
+    @entry.update_attributes(params[:entry])
+    return_to_part_of_page 
+  end
+  
   def destroy
     @entry = Entry.find(params[:id])
     return_to_last_entry_place = "/lists/#{@entry.list.id}##{@entry.medium.id}"

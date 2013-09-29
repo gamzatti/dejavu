@@ -7,7 +7,7 @@ Dejavu::Application.routes.draw do
   put 'entries/:id' => 'entries#update' 
   match 'entries/new' => 'entries#new'
   match 'entries/index' => 'entries#index'
-  
+  resources :entries
   match 'surprise' => 'entries#surprise'
 
   root :to => redirect('/surprise')    

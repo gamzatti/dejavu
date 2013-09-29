@@ -28,7 +28,7 @@ class ListsController < ApplicationController
     
   def edit_current_entry
     @entry = entry
-    redirect_to "/entries/#{@entry.id}"
+    redirect_to "/entries/#{@entry.id}/edit"
   end
   
 end
