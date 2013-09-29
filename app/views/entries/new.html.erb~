@@ -19,7 +19,11 @@
 
       <li><div id="up_to_field">
       <%= f.label :up_to, "Where are you up to?" %>
-      <%= f.text_field :up_to %> </li></div>
+      <%= f.text_field :up_to %> </div></li>
+
+      <li>
+      <%= f.label :author, "Who is the author?" %>
+      <%= f.text_field :author %> </li>
       
       <li>
       <%= f.label :url, "OR its URL?" %>

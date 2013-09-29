@@ -15,6 +15,16 @@ class ListsController < ApplicationController
     redirect_to '/lists/new'
   end
   
-  
+  def edit
+    @list = List.find(params[:id])
+  end
+
+  def update
+    @list = List.find(params[:id])
+    @list.update_attributes(params[:list])
+    redirect_to "/lists/#{@list.id}"
+
+  end
+    
   
 end

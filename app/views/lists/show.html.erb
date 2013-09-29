@@ -2,7 +2,9 @@
 
 <div class="mainpage">
 
-<h2><%= @list.name.capitalize %> Entries</h2>
+<h2><%= @list.name.capitalize %> Entries
+<%= link_to "Edit list", edit_list_path %></h2> 
+
 <div class="list<%=@list.id%>">
   <% @mediums.each do |medium| %>
     <% if Entry.where(list_id: @list.id, medium_id: medium.id).count != 0 %>

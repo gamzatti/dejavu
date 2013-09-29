@@ -2,22 +2,24 @@
   <ul>
     <%=nav_item(surprise_path, "Home", :home) %>
     <%=nav_item(new_entry_path, "Create entry", :new) %>
-    <%=nav_item(new_list_path, "Create list", :new) %>
+    <%=nav_item(new_medium_path, "Create medium", :new) %>
     <%=nav_item(entries_index_path, "All entries", :all) %>
     <%=nav_item_dropdown('#', "Lists", :lists) %>
+    <%=nav_item(new_list_path, "Create list", :new) %>
   </ul>
 
-  <ul class="dropdown">
+  <ul><!-- class="dropdown"-->
     <% List.all.each do |list| %>
     <li><%=link_to "#{list.name.capitalize} entries", list %></li>
     <% end %>
+
   </ul>
 
 
 
 
 
-<!--Make it work in here, and worry about helper later -->
+<!--Make it work in here, and worry about helper later 
 <ul>
   <li class="dropdown_button">
     <a>Lists</a>
@@ -27,7 +29,7 @@
     </ul>
   </li>
 </ul>
-
+-->
 
 
 

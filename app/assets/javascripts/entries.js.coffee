@@ -11,3 +11,13 @@ $ ->
   $("#entry_list_id_2").click ->
     $("#up_to_field").hide()
 
+$ ->
+  $("#author_field").hide()
+  $("#author_field").show() if $("#medium_list_id_1").is(":checked")
+  $("#medium_list_id_1").click ->
+    $("#author_field").show()
+  $("#medium_list_id_2").click ->
+    $("#author_field").hide()
+  $("#medium_list_id_3").click ->
+    $("#author_field").hide()
+

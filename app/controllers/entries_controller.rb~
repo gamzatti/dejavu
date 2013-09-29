@@ -4,11 +4,10 @@ class EntriesController < ApplicationController
   
   def index
     @mediums = Medium.all
-    @current_tab = :home
   end
 
   def surprise
-    @surprise_entries = Entry.order('random()').limit(3).where("list_id = '1' AND medium_id IN \('7', '8', '9', '11', '12'\) AND url != ''") #We should use a variable to find the list and medium rather than use the ID
+    @surprise_entries = Entry.order('random()').limit(3).where("list_id = '1' AND medium_id IN \('1', '7', '8', '9', '11', '12'\) AND url != ''") #We should use a variable to find the list and medium rather than use the ID
     @recent_entries = Entry.order('created_at DESC').limit(5).where("created_at > ?", 1.week.ago)
   end
   

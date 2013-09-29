@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130904183542) do
+ActiveRecord::Schema.define(:version => 20130929154736) do
 
   create_table "entries", :force => true do |t|
     t.string   "name",       :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130904183542) do
     t.integer  "list_id"
     t.integer  "medium_id"
     t.string   "up_to"
+    t.string   "author"
   end
 
   create_table "lists", :force => true do |t|
