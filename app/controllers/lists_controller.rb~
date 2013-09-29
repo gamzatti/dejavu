@@ -22,7 +22,13 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update_attributes(params[:list])
+    redirect_to "/lists/#{@list.id}"
+
   end
     
+  def edit_current_entry
+    @entry = entry
+    redirect_to "/entries/#{@entry.id}"
+  end
   
 end

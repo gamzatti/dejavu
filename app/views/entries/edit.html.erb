@@ -1,0 +1,38 @@
+<div class="mainpage">
+
+<h2>Edit entry</h3>
+<div class="bottomform">
+  <%= form_for(@entry) do |f| %>
+    <ul>
+      <li> Is it a?
+      <%=  select("entry", "medium_id", Medium.all.collect {|m| [ m.name, m.id ] } ) %>
+      </li>
+     
+      <li>
+      <%= f.label :list, "Is it new" %> 
+      <%= radio_button("entry", "list_id", 1, :checked => true) %> 
+      or for the archive?<%= radio_button("entry", "list_id", 2) %>
+      or in progress? <%= radio_button("entry", "list_id", 3) %>   </li>
+      <li>
+      <%= f.label :name, "What's its name?" %>
+      <%= f.text_field :name %> </li>
+
+      <li><div id="up_to_field">
+      <%= f.label :up_to, "Where are you up to?" %>
+      <%= f.text_field :up_to %> </div></li>
+
+      <li><div id="author_field">
+      <%= f.label :author, "Who is the author?" %>
+      <%= f.text_field :author %> </div></li>
+      
+      <li>
+      <%= f.label :url, "OR its URL?" %>
+      <%= f.text_field :url %> </li>
+
+      <li>
+      <%= f.submit "Update entry"%> </li>
+    </ul>
+  <% end %>
+</div>
+
+</div><!--mainpage-->

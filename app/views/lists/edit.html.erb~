@@ -1,1 +1,16 @@
-Edit page for lists
+<div class="mainpage">
+
+<h2>Edit</h3>
+<div class="bottomform">
+  <%= form_for(@list) do |f| %>
+    <ul>
+      <li>
+      <%= f.label :name, "What's its name?" %>
+      <%= f.text_field :name %> </li>
+      <li>
+      <%= f.submit "Update list"%> </li>
+    </ul>
+  <% end %>
+</div>
+
+</div><!--mainpage-->

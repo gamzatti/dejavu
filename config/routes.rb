@@ -3,9 +3,11 @@ Dejavu::Application.routes.draw do
 #  get 'lists/:foo' => 'lists#show', 'id' => 2
   resources :lists
   resources :media
+  match 'entries/:id/edit' => 'entries#edit'
+  put 'entries/:id' => 'entries#update' 
   match 'entries/new' => 'entries#new'
   match 'entries/index' => 'entries#index'
-  resources :entries
+  
   match 'surprise' => 'entries#surprise'
 
   root :to => redirect('/surprise')    
