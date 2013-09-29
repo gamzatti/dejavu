@@ -4,4 +4,8 @@ class ListsController < ApplicationController
     @mediums = Medium.all
     @current_tab = :lists
   end
+  
+  def new
+    @list = List.new
+  end
 end

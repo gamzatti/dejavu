@@ -2,6 +2,7 @@ Dejavu::Application.routes.draw do
 
 #  get 'lists/:foo' => 'lists#show', 'id' => 2
   resources :lists
+  resources :media
   match 'entries/new' => 'entries#new'
   match 'entries/index' => 'entries#index'
   resources :entries

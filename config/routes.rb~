@@ -5,9 +5,9 @@ Dejavu::Application.routes.draw do
   match 'entries/new' => 'entries#new'
   match 'entries/index' => 'entries#index'
   resources :entries
-  
-  root :to => redirect('/surprise')    
   match 'surprise' => 'entries#surprise'
+
+  root :to => redirect('/surprise')    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
