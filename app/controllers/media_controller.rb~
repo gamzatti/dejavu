@@ -1,5 +1,13 @@
 class MediaController < ApplicationController
   def new
-    @medium = Media.new
+    @medium = Medium.new
   end
+  
+    
+  def create
+    @medium = Medium.new(params[:medium])
+    @medium.save
+    redirect_to '/surprise'
+  end
+
 end
