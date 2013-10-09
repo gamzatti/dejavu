@@ -127,8 +127,11 @@ ul {
 
 .nav .dropdown li {
   background-color:white;
-  text-transform: lowercase;
   float:none;
+  border-radius:0px;
+  height:10px;
+  font-size:0.8em;
+  text-align:center;
 }
 
 .nav ul ul li a {

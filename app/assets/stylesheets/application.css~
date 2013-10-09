@@ -119,6 +119,7 @@ ul {
   float:right;
   clear:both;
   width:250px;
+  display:none;
   position: absolute;	
   top:70px;
   right:0;
@@ -126,8 +127,10 @@ ul {
 
 .nav .dropdown li {
   background-color:white;
-  text-transform: lowercase;
   float:none;
+  border-radius:0px;
+  height:10px;
+  font-size:0.8em;
 }
 
 .nav ul ul li a {

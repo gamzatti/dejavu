@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def nav_item_dropdown(path, text, current_tab=nil)
-    "<li class='#{determine_active_page(path, current_tab)}'>#{link_to text, "#", {:onclick => "$('.dropdown').slideToggle()" } }</li>".html_safe
+    "<li class='#{determine_active_page(path, current_tab)}'>#{link_to text, "#", {:onclick => "$('.dropdown').slideToggle()", :class => "dropdown_button" } }</li>".html_safe
   end
 
 end
